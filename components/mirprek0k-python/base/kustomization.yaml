@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: mirprek0k-python
+  janus-idp.io/tekton: mirprek0k-python
+  backstage.io/kubernetes-id: mirprek0k-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: mirprek0k-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
